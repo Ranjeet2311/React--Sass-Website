@@ -1,0 +1,42 @@
+// -----Media qurey ---
+
+@mixin at-600px {
+  @media (max-width: 600px) {
+    @content;
+  }
+}
+@mixin at-900px {
+  @media (max-width: 900px) {
+    @content;
+  }
+}
+
+// --------------
+
+.footer-outer-wrapper {
+  background-color: rgb(66, 65, 65);
+
+  .footer-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(66, 65, 65);
+
+    @include at-600px() {
+      flex-direction: column;
+    }
+  }
+
+  .copyright {
+    h1 {
+      font-size: 1rem;
+      padding: 0.5rem 2rem;
+      text-align: center;
+
+      @include at-600px() {
+        padding: 0.5rem 0.2rem;
+      }
+    }
+  }
+}

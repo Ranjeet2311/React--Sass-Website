@@ -1,0 +1,90 @@
+// -----Media qurey ---
+
+@mixin at-600px {
+  @media (max-width: 600px) {
+    @content;
+  }
+}
+@mixin at-900px {
+  @media (max-width: 900px) {
+    @content;
+  }
+}
+
+// --------------
+
+.SectionBox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 1rem;
+  height: 100vh;
+  // width: 100%;
+  background: linear-gradient(to right, #ffffff, #dcdedf);
+
+  @include at-600px() {
+    flex-direction: column;
+  }
+
+  .SectionBox-caption {
+    width: 50%;
+    padding: 0.5rem 2rem;
+    display: block;
+    margin: 0rem auto;
+
+    @include at-900px() {
+      padding: 0.2rem 1rem;
+    }
+    @include at-600px() {
+      width: 100%;
+    }
+
+    h1 {
+      font-size: 2.8rem;
+      color: black;
+      text-shadow: 1px 1px 4px white;
+
+      @include at-900px() {
+        font-size: 2rem;
+      }
+    }
+
+    hr {
+      width: 40%;
+      margin: 1.5rem 0rem;
+    }
+
+    p {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: black;
+      text-shadow: 1px 1px 4px white;
+
+      @include at-900px() {
+        font-size: 0.9rem;
+      }
+    }
+  }
+
+  .SectionBox-img {
+    width: 40%;
+    transform: rotate(15deg);
+    padding: 0.5rem 2rem;
+    animation: drone-img 8s ease-out 0.8s infinite running;
+  }
+
+  @keyframes drone-img {
+    0% {
+      transform: translate(0px, -50px);
+    }
+    25% {
+      transform: translate(-20px, 50px);
+    }
+    50% {
+      transform: translate(10px, -60px);
+    }
+    100% {
+      transform: translate(0px, 50px);
+    }
+  }
+}

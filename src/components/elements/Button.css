@@ -1,0 +1,39 @@
+.btn {
+  margin: 2rem 2rem;
+  padding: 0.4rem 1rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border: 2px solid #004e92;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  color: white;
+  background: -webkit-gradient(linear, left top, right top, from(#000428), to(#004e92));
+  background: linear-gradient(to right, #000428, #004e92);
+}
+
+@media (max-width: 900px) {
+  .btn {
+    margin: 1rem;
+    padding: 0.2rem 0.8rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+}
+
+.btn .fas {
+  padding: 0rem 0.2rem;
+  font-size: 1rem;
+}
+
+@media (max-width: 900px) {
+  .btn .fas {
+    font-size: 0.8rem;
+  }
+}
+
+.btn:hover {
+  background: -webkit-gradient(linear, left top, right top, from(#004e92), to(#000428));
+  background: linear-gradient(to right, #004e92, #000428);
+  color: white;
+}
+/*# sourceMappingURL=Button.css.map */

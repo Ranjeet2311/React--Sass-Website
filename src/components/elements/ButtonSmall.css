@@ -1,0 +1,19 @@
+.btn-small {
+  margin: 1rem 1rem;
+  padding: 0.2rem 1rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border: 2px solid #004e92;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  color: white;
+  background: -webkit-gradient(linear, left top, right top, from(#000428), to(#004e92));
+  background: linear-gradient(to right, #000428, #004e92);
+}
+
+.btn-small:hover {
+  background: -webkit-gradient(linear, left top, right top, from(#004e92), to(#000428));
+  background: linear-gradient(to right, #004e92, #000428);
+  color: white;
+}
+/*# sourceMappingURL=ButtonSmall.css.map */

@@ -1,0 +1,47 @@
+// -----Media qurey ---
+
+@mixin for-tablet-portrait-up {
+  @media (min-width: 600px) {
+    @content;
+  }
+}
+@mixin at-900px {
+  @media (max-width: 900px) {
+    @content;
+  }
+}
+
+// --------------
+
+.btn {
+  margin: 2rem 2rem;
+  padding: 0.4rem 1rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border: 2px solid #004e92;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  color: white;
+  background: linear-gradient(to right, #000428, #004e92);
+
+  @include at-900px() {
+    margin: 1rem;
+    padding: 0.2rem 0.8rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+
+  .fas {
+    padding: 0rem 0.2rem;
+    font-size: 1rem;
+
+    @include at-900px() {
+      font-size: 0.8rem;
+    }
+  }
+
+  &:hover {
+    background: linear-gradient(to right, #004e92, #000428);
+    color: white;
+  }
+}

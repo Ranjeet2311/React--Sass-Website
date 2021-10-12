@@ -1,0 +1,47 @@
+.card-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 1rem;
+  margin: 1.5rem;
+  color: black;
+  border: 2px solid silver;
+  border-radius: 0.5rem;
+  box-shadow: 2px 2px 6px black;
+
+  &:hover {
+    box-shadow: 6px 6px 20px black;
+  }
+
+  img {
+    width: 65%;
+    margin: 1.6rem;
+    overflow: hidden;
+
+    &:hover {
+      transform: scale(1.4);
+      transition: all 0.4s ease-in;
+    }
+  }
+
+  .card-caption {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    h2 {
+      font-size: 1.5rem;
+    }
+
+    hr {
+      padding: 0.5rem auto;
+    }
+
+    p {
+      font-size: 1rem;
+      font-weight: 600;
+      text-align: center;
+    }
+  }
+}

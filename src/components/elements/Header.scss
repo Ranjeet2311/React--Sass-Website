@@ -1,0 +1,47 @@
+// -----Media qurey ---
+
+@mixin for-tablet-portrait-up {
+  @media (min-width: 600px) {
+    @content;
+  }
+}
+@mixin at-900px {
+  @media (max-width: 900px) {
+    @content;
+  }
+}
+
+// --------------
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: ;
+
+  @include at-900px() {
+    width: 80%;
+  }
+  h1 {
+    font-size: 3rem;
+    color: white;
+    text-shadow: 1px 1px 4px black;
+    text-align: center;
+
+    @include at-900px() {
+      font-size: 2rem;
+    }
+  }
+
+  p {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: white;
+    text-shadow: 1px 1px 4px black;
+    text-align: center;
+    @include at-900px() {
+      font-size: 0.9rem;
+    }
+  }
+}

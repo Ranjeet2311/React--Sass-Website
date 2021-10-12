@@ -1,0 +1,78 @@
+// -----Media qurey ---
+
+@mixin for-tablet-portrait-up {
+  @media (min-width: 600px) {
+    @content;
+  }
+}
+@mixin at-900px {
+  @media (max-width: 900px) {
+    @content;
+  }
+}
+
+// --------------
+
+.caption {
+  position: absolute;
+  width: 60%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 1rem auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  h1 {
+    font-size: 3rem;
+    color: white;
+    text-shadow: 1px 1px 4px black;
+    text-align: center;
+
+    @include at-900px() {
+      font-size: 2rem;
+    }
+  }
+
+  p {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: white;
+    text-shadow: 1px 1px 4px black;
+    text-align: center;
+
+    @include at-900px() {
+      font-size: 0.9rem;
+    }
+  }
+
+  .home-btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .btn {
+      margin: 2rem 2rem;
+      padding: 0.4rem 1rem;
+      font-size: 1.2rem;
+      font-weight: 600;
+      border: 2px solid #004e92;
+      border-radius: 0.4rem;
+      cursor: pointer;
+      color: white;
+      background: linear-gradient(to right, #000428, #004e92);
+
+      .fas {
+        padding: 0rem 0.2rem;
+        font-size: 1rem;
+      }
+
+      &:hover {
+        background: linear-gradient(to right, #004e92, #000428);
+        color: white;
+      }
+    }
+  }
+}

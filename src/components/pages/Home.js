@@ -1,4 +1,6 @@
 import React from "react";
+import { useEffect, useRef } from "react";
+import { gsap } from "gsap";
 import "./Home.css";
 import background2 from "../videos/background-react2.mp4";
 import drone from "../images/n-drone.png";
@@ -14,6 +16,16 @@ import cardImg3 from "../images/QuadCop.png";
 import Footer from "../elements/Footer";
 
 const Home = () => {
+  const heroContent = useRef();
+  const btnBox = useRef();
+  const Section = useRef();
+
+  // wait until DOM has been rendered
+  useEffect(() => {
+    gsap.from(heroContent.current, { x: "-1000", duration: 2 });
+    gsap.from(btnBox.current, { x: "1000", duration: 2 });
+    gsap.from(Section.current, { x: "-1000", duration: 2 });
+  });
   return (
     <div className="wrapper-home">
       <section className="Hero-section">
@@ -24,16 +36,18 @@ const Home = () => {
           autoPlay
           muted
         ></video>
-        <CaptionBoxCenter
-          title="Make most of your travels with our best"
-          para=" The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will ."
-        />
-        <div className="home-btn">
+        <div className="home-content " ref={heroContent}>
+          <CaptionBoxCenter
+            title="Make most of your travels with our best"
+            para=" The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will ."
+          />
+        </div>
+        <div className="home-btn" ref={btnBox}>
           <Button text="Take a tour" />
           <Button text="Connect with us" />
         </div>
       </section>
-      <section className="section-drone">
+      <section className="section-drone" ref={Section}>
         <SectionBoxWithAnimation
           title="Customized drones for your business and personal needs"
           para="Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi

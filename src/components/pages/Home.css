@@ -1,5 +1,4 @@
 .Hero-section {
-  height: 80vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -15,12 +14,6 @@
           flex-direction: column;
 }
 
-@media (max-width: 900px) {
-  .Hero-section {
-    height: 50vh;
-  }
-}
-
 .Hero-section .background-video {
   position: absolute;
   top: 0;
@@ -28,12 +21,11 @@
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
-  height: 90vh;
+  height: 100vh;
   z-index: -1;
 }
 
 .section-drone-flying {
-  height: 40vh;
   padding: 1rem 1rem;
   background-color: #424141;
   color: white;
@@ -54,7 +46,6 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    height: 60vh;
   }
 }
 
@@ -81,7 +72,6 @@
 }
 
 .section-card {
-  height: 100%;
   padding: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;

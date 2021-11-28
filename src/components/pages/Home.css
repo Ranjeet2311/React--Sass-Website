@@ -114,4 +114,11 @@
             flex-direction: column;
   }
 }
+
+.container {
+  background-color: #000428;
+  height: 100vh;
+  text-align: center;
+  color: white;
+}
 /*# sourceMappingURL=Home.css.map */

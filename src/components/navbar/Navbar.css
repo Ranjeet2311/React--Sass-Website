@@ -113,7 +113,8 @@
 
 .navbar-wrapper .navbar a {
   text-decoration: none;
-  color: black;
+  color: grey;
+  text-shadow: 1px 1px 1px black;
   font-size: 1.2rem;
   font-weight: 500;
 }
